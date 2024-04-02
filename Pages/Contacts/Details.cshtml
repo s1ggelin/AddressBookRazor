@@ -1,0 +1,44 @@
+﻿@page
+@model AddressBookRazor.Pages.Contacts.DetailsModel
+@{
+	ViewData["Title"] = "Contact Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <hr />
+<dl>
+    <dt>First Name:</dt>
+    <dd>@Model.Contact.FirstName</dd>
+
+    <dt>Last Name:</dt>
+    <dd>@Model.Contact.LastName</dd>
+
+    <dt>Email:</dt>
+    <dd>@Model.Contact.Email</dd>
+
+    <dt>Phone Number:</dt>
+    <dd>@Model.Contact.PhoneNumber</dd>
+
+    <dt>Address:</dt>
+    <dd>@Model.Contact.Address</dd>
+
+    <dt>City:</dt>
+    <dd>@Model.Contact.City</dd>
+
+    <dt>Region:</dt>
+    <dd>@Model.Contact.Region</dd>
+
+    <dt>Postal Code:</dt>
+    <dd>@Model.Contact.PostalCode</dd>
+
+    <dt>Country:</dt>
+    <dd>@Model.Contact.Country</dd>
+</dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Contact.Id">Edit</a> |
+    <a asp-page="./Delete" asp-route-id="@Model.Contact.Id">Delete</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

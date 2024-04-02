@@ -1,0 +1,23 @@
+﻿@page
+@model ContactsModel
+
+@{
+    ViewData["Title"] = "Contacts";
+}
+
+<h1>Contacts</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+
+
+<ul>
+    @foreach (var contact in Model.Contacts)
+    {
+        <li>
+            <a asp-page="./Details" asp-route-id="@contact.Id">@contact.FirstName @contact.LastName</a>
+            </li>
+    }
+
+</ul>

@@ -1,0 +1,60 @@
+﻿@page
+@model AddressBookRazor.Pages.Contacts.EditModel
+@{
+
+	ViewData["Title"] = "Edit";
+}
+<h1>Edit</h1>
+
+<form method="post">
+    <input type="hidden" asp-for="Contact.Id" />
+    <div class="form-group">
+        <label asp-for="Contact.FirstName">First Name</label>
+        <input asp-for="Contact.FirstName" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Contact.LastName">Last Name</label>
+        <input asp-for="Contact.LastName" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Contact.Email">Email</label>
+        <input asp-for="Contact.Email" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Contact.PhoneNumber">Phone Number</label>
+        <input asp-for="Contact.PhoneNumber" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Contact.Address">Address</label>
+        <input asp-for="Contact.Address" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Contact.City">City</label>
+        <input asp-for="Contact.City" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Contact.Region">Region</label>
+        <input asp-for="Contact.Region" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Contact.PostalCode">Postal Code</label>
+        <input asp-for="Contact.PostalCode" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Contact.Country">Country</label>
+        <input asp-for="Contact.Country" class="form-control" />
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<br />
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
